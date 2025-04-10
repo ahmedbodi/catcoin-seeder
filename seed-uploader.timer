@@ -1,0 +1,11 @@
+[Unit]
+Description=Seed Uploader
+Requires=seed-uploader.service
+
+
+[Timer]
+Unit=seed-uploader.service
+OnCalendar=*-*-* *:*:00
+
+[Install]
+WantedBy=timers.target

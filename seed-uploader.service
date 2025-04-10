@@ -1,0 +1,13 @@
+[Unit]
+Description=Seed Uploader
+After=multi-user.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/opt/seeder/cf-uploader
+ExecStart=/usr/bin/python3 seeder.py
+
+[Install]
+WantedBy=multi-user.target

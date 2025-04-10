@@ -1,0 +1,14 @@
+[Unit]
+Description=Seed
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+User=root
+Group=root
+WorkingDirectory=/opt/seeder
+ExecStart=/usr/local/bin/dnsseed --wipeban --wipeignore --dumpall
+
+[Install]
+WantedBy=multi-user.target
